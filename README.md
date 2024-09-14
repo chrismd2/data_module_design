@@ -29,6 +29,14 @@ def deps do
 end
 ```
 
+Set project path (which should match dependency path), get dependencies, and run migrations
+
+```bash
+export DATAMODULEDESIGNPATH='./data_module_design'
+mix deps.get
+mix ecto.migrate --migrations-path $DATAMODULEDESIGNPATH/priv/repo/migrations
+```
+
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/data_module_design>.

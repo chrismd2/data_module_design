@@ -10,3 +10,7 @@ lib/data_module_design_web/*
 !lib/data_module_design/
 lib/data_module_design/*
 !lib/data_module_design/people*
+
+!priv/
+priv/*
+!priv/repo/
