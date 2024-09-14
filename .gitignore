@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!mix.exs
 !README.md
 !lib
 lib/data_module_design
