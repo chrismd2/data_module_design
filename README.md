@@ -29,6 +29,15 @@ def deps do
 end
 ```
 
+Configure database in config for server this is integrated in
+```elixir
+config :data_module_design, DataModuleDesign.Repo,
+  url: database_url,
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+```
+
 Set project path (which should match dependency path), get dependencies, and run migrations
 
 ```bash
@@ -37,7 +46,16 @@ mix deps.get
 mix ecto.migrate --migrations-path $DATAMODULEDESIGNPATH/priv/repo/migrations
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/data_module_design>.
+Add routes to server this project is integrated with to existing routes
+```elixir
+  scope "/people", DataModuleDesignWeb do
+    pipe_through :browser
 
+    live "/", PersonLive.Index, :index
+    live "/new", PersonLive.Index, :new
+    live "/:id/edit", PersonLive.Index, :edit
+
+    live "/:id", PersonLive.Show, :show
+    live "/:id/show/edit", PersonLive.Show, :edit
+  end
+```
