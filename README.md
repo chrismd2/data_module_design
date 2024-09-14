@@ -1,6 +1,20 @@
 # DataModuleDesign
 
-**TODO: Add description**
+## Data Modeling and Design
+There are two representations of a Person to support an edititng state and fully validated.
+- Editing: Various fields may be in an incomplete or invalid state while a person is in the process of being edited.
+- Validated / Fully Formed: This model will be consumed by the rest of the application and should make impossible states unrepresentable, act as proof that the model has passed certain validations, and assist users of the model by preventing structural mistakes, enforcing semantics, and simplifying use.  Available fields are:
+  - First Name
+  - Last Name
+  - Social Security Number
+  - Marital Status
+  - US Phone Number
+
+This project demonstrates this by using a **Form** and **Module/Struct**
+
+Consider data integrity, usage ergonomics, transparency of the Api, and any other quality measures you generally value.
+
+You should design the validated Person based upon your own personal experience.
 
 ## Installation
 
