@@ -5,9 +5,7 @@
 !lib
 lib/data_module_design
 lib/data_module_design.ex
-lib/data_module_design_web/*
-!lib/data_module_design_web/live
-!lib/data_module_design_web/components
+!lib/data_module_design_web/
 
 !lib/data_module_design/
 lib/data_module_design/*
