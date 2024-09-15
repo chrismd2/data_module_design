@@ -11,6 +11,8 @@ lib/data_module_design.ex
 lib/data_module_design/*
 !lib/data_module_design/people*
 
+!lib/data_module_design/repo.ex
+
 !priv/
 priv/*
 !priv/repo/
